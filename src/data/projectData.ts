@@ -46,10 +46,10 @@ export const projects: Project[] = [
         problem:
             "Australian small businesses in the facility management sector struggled with fragmented tools for job scheduling, incident tracking, and team coordination. They needed a unified, mobile-first solution that could work offline and sync seamlessly.",
         solution:
-            "Built a cross-platform mobile application using React Native and Expo, backed by a robust Node.js API with Neon DB (serverless Postgres). Implemented tRPC for type-safe API calls and Prisma for database management, ensuring data consistency and developer productivity.",
+            "Built a cross-platform mobile application using React Native and Expo, backed by a robust Node.js/Bun API with Neon DB (serverless Postgres). Implemented tRPC for type-safe API calls and Prisma for database management, ensuring data consistency and developer productivity.",
         role: "Full Stack Developer - Led end-to-end development from architecture design to deployment",
         timeline: "July 2025 - Present",
-        tags: ["React Native", "Expo", "Node.js", "Neon DB", "tRPC", "Prisma"],
+        tags: ["React Native", "Expo", "Node.js", "Bun", "Neon DB", "tRPC", "Prisma"],
         features: [
             "Cross-platform mobile app for iOS and Android",
             "User onboarding with role-based access control",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
         ],
         technologies: {
             mobile: ["React Native", "Expo"],
-            backend: ["Node.js", "tRPC", "Prisma"],
+            backend: ["Node.js / Bun", "tRPC", "Prisma"],
             database: ["Neon DB (Postgres)", "SQLite (offline)"],
             devops: ["Expo EAS", "GitHub Actions"],
         },
@@ -116,7 +116,6 @@ export const projects: Project[] = [
             "Collaborative ordering with approval workflows",
             "Advanced search and filtering with faceted navigation",
             "Personalized recommendations based on order history",
-            "Mobile-responsive design for on-the-go access",
             "Multi-tenant architecture supporting different business types",
         ],
         challenges: [
@@ -133,9 +132,9 @@ export const projects: Project[] = [
         ],
         technologies: {
             frontend: ["React", "Redux", "TypeScript"],
-            backend: ["GraphQL", "Node.js", "BFF Pattern"],
+            backend: ["GraphQL", "Node.js", "Spring Boot"],
             devops: ["AWS", "Docker", "Kubernetes", "CI/CD"],
-            other: ["Microservices Architecture"],
+            other: ["Microservices Architecture, BFF"],
         },
         links: {
             // Private enterprise project
@@ -196,8 +195,8 @@ export const projects: Project[] = [
             "Improved operational efficiency for Swiss chemical facilities",
         ],
         technologies: {
-            frontend: ["React", "TypeScript", "Custom DOM Components"],
-            backend: ["WebSockets", "Node.js"],
+            frontend: ["React", "TypeScript", "Tailwind css", "Custom DOM Components"],
+            backend: ["WebSockets", "tRPC", "Node.js"],
             other: ["Data Visualization", "Real-time Systems", "IoT Protocols"],
         },
         links: {
@@ -230,7 +229,7 @@ export const projects: Project[] = [
             "Built a full-stack logistics platform with Angular web interface, Flutter mobile app, and Spring Boot microservices. Implemented real-time GPS tracking, smart contract management, and automated workflow systems deployed on GCP Kubernetes for scalability.",
         role: "Software Engineer - Full-stack development across web, mobile, and backend",
         timeline: "October 2020 - February 2022",
-        tags: ["Flutter", "Angular", "Spring Boot", "GCP", "Kubernetes", "GraphQL"],
+        tags: ["Angular", "Spring Boot", "Node.js", "GCP", "Kubernetes", "GraphQL", "Flutter",],
         features: [
             "Real-time GPS tracking for fleet management",
             "Smart contract creation and management",
@@ -253,10 +252,10 @@ export const projects: Project[] = [
             "Successfully onboarded 50+ logistics companies",
         ],
         technologies: {
-            frontend: ["Angular 9", "TypeScript", "Ngxs"],
-            mobile: ["Flutter", "Dart"],
+            frontend: ["Angular 9+", "TypeScript", "Ngxs"],
+            mobile: ["Flutter"],
             backend: ["Spring Boot", "Node.js", "Nest.js", "GraphQL"],
-            database: ["PostgreSQL", "MongoDB"],
+            database: ["MongoDB"],
             devops: ["GCP", "Kubernetes", "Docker"],
         },
         links: {
@@ -312,11 +311,11 @@ export const projects: Project[] = [
         ],
         technologies: {
             frontend: ["React", "TypeScript"],
-            backend: ["Python", "Flask", "NLP Libraries"],
+            backend: ["Python", "fastAPI", "NLP Libraries"],
             other: ["Machine Learning", "Random Forest", "Natural Language Processing"],
         },
         links: {
-            github: "#", // Update with actual link
+            github: "https://github.com/srinathmahagama/clinical-assistant", // Update with actual link
         },
         images: {
             hero: "/projects/caremate/hero.png",
@@ -364,7 +363,7 @@ export const projects: Project[] = [
             "Enhanced customer satisfaction scores",
         ],
         technologies: {
-            frontend: ["Angular", "TypeScript"],
+            frontend: ["Angular 6+", "TypeScript"],
             backend: ["Spring Boot", "Java"],
             database: ["MySQL"],
             other: ["Enterprise Integration", "Workflow Automation"],

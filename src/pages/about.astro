@@ -42,8 +42,8 @@ const experience = [
         date: "Oct 2020 – Feb 2022",
         description: [
             "Developed full-stack modules for a supply chain automation platform used by exporters, importers, and freight forwarders.",
-            "Built real-time transport tracking features using Flutter, improving status update efficiency.",
             "Created responsive Angular user interfaces and Spring Boot microservices deployed on GCP Kubernetes.",
+            "Built real-time transport tracking features using Flutter, improving status update efficiency.",
         ],
     },
     {
@@ -79,7 +79,9 @@ const education = [
         <h1 class="text-5xl md:text-6xl mb-4">
             About <span class="gradient-text">Me</span>
         </h1>
-        <p class="text-xl text-[#a0a0a0] max-w-[800px] mx-auto mb-8">
+        <p
+            class="text-xl text-[var(--color-text-muted)] max-w-[800px] mx-auto mb-8"
+        >
             I am a passionate Full Stack Developer with over 5 years of
             experience building scalable web and mobile applications. I
             specialize in the JavaScript ecosystem, Cloud Architecture, and
@@ -136,9 +138,13 @@ const education = [
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="glass-panel p-8">
-                <h3 class="text-xl text-white mb-2">Fundamentals of MCP</h3>
+                <h3 class="text-xl text-[var(--color-text)] mb-2">
+                    Fundamentals of MCP
+                </h3>
                 <p class="text-[var(--color-primary)] mb-4">HuggingFace</p>
-                <p class="text-sm text-[#a0a0a0]">Issued: October 2025</p>
+                <p class="text-sm text-[var(--color-text-muted)]">
+                    Issued: October 2025
+                </p>
                 <a
                     href="https://huggingface.co/datasets/mcp-course/certificates/resolve/main/certificates/SMahagama/2025-10-31.png"
                     target="_blank"
@@ -167,19 +173,19 @@ const education = [
                         <div class="glass-panel p-8">
                             <div class="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
                                 <div>
-                                    <h3 class="text-2xl text-white mb-1">
+                                    <h3 class="text-2xl text-[var(--color-text)] mb-1">
                                         {job.role}
                                     </h3>
                                     <h4 class="text-lg text-[var(--color-primary)] font-medium">
                                         {job.company}
                                     </h4>
                                 </div>
-                                <div class="text-right md:text-right text-sm text-[#a0a0a0] flex flex-row md:flex-col gap-4 md:gap-0">
+                                <div class="text-right md:text-right text-sm text-[var(--color-text-muted)] flex flex-row md:flex-col gap-4 md:gap-0">
                                     <span class="block">{job.date}</span>
                                     <span class="block">{job.location}</span>
                                 </div>
                             </div>
-                            <ul class="list-disc pl-6 text-[#a0a0a0] space-y-2">
+                            <ul class="list-disc pl-6 text-[var(--color-text-muted)] space-y-2">
                                 {job.description.map((item) => (
                                     <li>{item}</li>
                                 ))}
@@ -201,11 +207,13 @@ const education = [
             {
                 education.map((edu) => (
                     <div class="glass-panel p-8">
-                        <h3 class="text-xl text-white mb-2">{edu.degree}</h3>
+                        <h3 class="text-xl text-[var(--color-text)] mb-2">
+                            {edu.degree}
+                        </h3>
                         <h4 class="text-[var(--color-primary)] mb-4">
                             {edu.school}
                         </h4>
-                        <div class="text-sm text-[#a0a0a0] flex justify-between">
+                        <div class="text-sm text-[var(--color-text-muted)] flex justify-between">
                             <span>{edu.date}</span>
                             <span>{edu.location}</span>
                         </div>

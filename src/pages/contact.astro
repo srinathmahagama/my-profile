@@ -7,7 +7,7 @@ import Layout from "../layouts/Layout.astro";
         <h1 class="text-5xl md:text-6xl mb-4">
             Get in <span class="gradient-text">Touch</span>
         </h1>
-        <p class="text-xl text-[#a0a0a0] max-w-[600px] mx-auto">
+        <p class="text-xl text-[var(--color-text-muted)] max-w-[600px] mx-auto">
             Have a project in mind or just want to say hi? Feel free to reach
             out.
         </p>
@@ -17,26 +17,30 @@ import Layout from "../layouts/Layout.astro";
         class="container mb-24 grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12"
     >
         <div class="glass-panel p-12 h-fit">
-            <h3 class="text-3xl mb-6 text-white font-bold">
+            <h3 class="text-3xl mb-6 text-[var(--color-text)] font-bold">
                 Contact Information
             </h3>
-            <p class="text-[#a0a0a0] mb-10 leading-relaxed">
+            <p class="text-[var(--color-text-muted)] mb-10 leading-relaxed">
                 I'm currently available for freelance work and open to new
                 opportunities.
             </p>
 
             <div class="mb-6">
-                <span class="block text-sm text-[#a0a0a0] mb-1">Email</span>
+                <span class="block text-sm text-[var(--color-text-muted)] mb-1"
+                    >Email</span
+                >
                 <a
                     href="mailto:srinath@example.com"
-                    class="text-lg text-white font-medium hover:text-[var(--color-primary)] transition-colors"
+                    class="text-lg text-[var(--color-text)] font-medium hover:text-[var(--color-primary)] transition-colors"
                     >srinathsachithra@gmail.com</a
                 >
             </div>
 
             <div class="mb-6">
-                <span class="block text-sm text-[#a0a0a0] mb-1">Location</span>
-                <span class="text-lg text-white font-medium"
+                <span class="block text-sm text-[var(--color-text-muted)] mb-1"
+                    >Location</span
+                >
+                <span class="text-lg text-[var(--color-text)] font-medium"
                     >Melbourne, Australia</span
                 >
             </div>
@@ -46,14 +50,14 @@ import Layout from "../layouts/Layout.astro";
                     href="http://github.com/srinathmahagama"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="px-4 py-2 border border-white/20 rounded-full text-white text-sm transition-all duration-300 hover:bg-white hover:text-[var(--color-bg)]"
+                    class="px-4 py-2 border border-[var(--color-border)] rounded-full text-[var(--color-text)] text-sm transition-all duration-300 hover:bg-[var(--color-primary)]/10 hover:border-[var(--color-primary)]"
                     >GitHub</a
                 >
                 <a
                     href="https://www.linkedin.com/in/srinath-mahagama-78239b186"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="px-4 py-2 border border-white/20 rounded-full text-white text-sm transition-all duration-300 hover:bg-white hover:text-[var(--color-bg)]"
+                    class="px-4 py-2 border border-[var(--color-border)] rounded-full text-[var(--color-text)] text-sm transition-all duration-300 hover:bg-[var(--color-primary)]/10 hover:border-[var(--color-primary)]"
                     >LinkedIn</a
                 >
             </div>
@@ -62,7 +66,9 @@ import Layout from "../layouts/Layout.astro";
         <div class="glass-panel p-12">
             <form class="space-y-6">
                 <div>
-                    <label for="name" class="block mb-2 text-white font-medium"
+                    <label
+                        for="name"
+                        class="block mb-2 text-[var(--color-text)] font-medium"
                         >Name</label
                     >
                     <input
@@ -71,12 +77,14 @@ import Layout from "../layouts/Layout.astro";
                         name="name"
                         placeholder="Your Name"
                         required
-                        class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white text-base transition-colors duration-300 focus:outline-none focus:border-[var(--color-primary)]"
+                        class="w-full p-4 bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-lg text-[var(--color-text)] text-base transition-colors duration-300 focus:outline-none focus:border-[var(--color-primary)]"
                     />
                 </div>
 
                 <div>
-                    <label for="email" class="block mb-2 text-white font-medium"
+                    <label
+                        for="email"
+                        class="block mb-2 text-[var(--color-text)] font-medium"
                         >Email</label
                     >
                     <input
@@ -85,14 +93,15 @@ import Layout from "../layouts/Layout.astro";
                         name="email"
                         placeholder="your@email.com"
                         required
-                        class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white text-base transition-colors duration-300 focus:outline-none focus:border-[var(--color-primary)]"
+                        class="w-full p-4 bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-lg text-[var(--color-text)] text-base transition-colors duration-300 focus:outline-none focus:border-[var(--color-primary)]"
                     />
                 </div>
 
                 <div>
                     <label
                         for="message"
-                        class="block mb-2 text-white font-medium">Message</label
+                        class="block mb-2 text-[var(--color-text)] font-medium"
+                        >Message</label
                     >
                     <textarea
                         id="message"
@@ -100,7 +109,7 @@ import Layout from "../layouts/Layout.astro";
                         rows="5"
                         placeholder="How can I help you?"
                         required
-                        class="w-full p-4 bg-white/5 border border-white/10 rounded-lg text-white text-base transition-colors duration-300 focus:outline-none focus:border-[var(--color-primary)]"
+                        class="w-full p-4 bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-lg text-[var(--color-text)] text-base transition-colors duration-300 focus:outline-none focus:border-[var(--color-primary)]"
                     ></textarea>
                 </div>
 
