@@ -1,7 +1,12 @@
 ---
+interface Tech {
+    name: string;
+    icon?: string;
+}
+
 interface TechCategory {
     name: string;
-    technologies: string[];
+    technologies: Tech[];
     color: string;
 }
 
@@ -9,99 +14,99 @@ const techStack: TechCategory[] = [
     {
         name: "Frontend",
         technologies: [
-            "React",
-            "React Native",
-            "Angular",
-            "Next.js",
-            "TypeScript",
-            "JavaScript",
-            "HTML5",
-            "CSS3",
-            "Tailwind CSS",
-            "Redux",
-            "Zustand",
-            "Expo",
-            "Flutter",
-            "Astro",
+            { name: "React", icon: "react" },
+            { name: "React Native", icon: "react" },
+            { name: "Angular", icon: "angular" },
+            { name: "Next.js", icon: "nextjs" },
+            { name: "TypeScript", icon: "ts" },
+            { name: "JavaScript", icon: "js" },
+            { name: "HTML5", icon: "html" },
+            { name: "CSS3", icon: "css" },
+            { name: "Tailwind CSS", icon: "tailwind" },
+            { name: "Redux", icon: "redux" },
+            { name: "Zustand" },
+            { name: "Expo" },
+            { name: "Flutter", icon: "flutter" },
+            { name: "Astro", icon: "astro" },
         ],
         color: "from-blue-500 to-cyan-500",
     },
     {
         name: "Backend",
         technologies: [
-            "Node.js",
-            "Express.js",
-            "Bun",
-            "NestJS",
-            "Spring Boot",
-            "GraphQL",
-            "tRPC",
-            "REST API",
-            "fastAPI",
-            "Microservices",
-            "WebSockets",
-            "Java",
-            "python",
+            { name: "Node.js", icon: "nodejs" },
+            { name: "Express.js", icon: "express" },
+            { name: "Bun", icon: "bun" },
+            { name: "NestJS", icon: "nestjs" },
+            { name: "Spring Boot", icon: "spring" },
+            { name: "GraphQL", icon: "graphql" },
+            { name: "tRPC" },
+            { name: "REST API" },
+            { name: "fastAPI", icon: "fastapi" },
+            { name: "Microservices" },
+            { name: "WebSockets" },
+            { name: "Java", icon: "java" },
+            { name: "python", icon: "py" },
         ],
         color: "from-green-500 to-emerald-500",
     },
     {
         name: "Database & ORM",
         technologies: [
-            "PostgreSQL",
-            "MySQL",
-            "MongoDB",
-            "Prisma",
-            "Neon DB",
-            "Redis",
-            "TypeORM",
+            { name: "PostgreSQL", icon: "postgres" },
+            { name: "MySQL", icon: "mysql" },
+            { name: "MongoDB", icon: "mongodb" },
+            { name: "Prisma", icon: "prisma" },
+            { name: "Neon DB" },
+            { name: "Redis", icon: "redis" },
+            { name: "TypeORM" },
         ],
         color: "from-purple-500 to-pink-500",
     },
     {
         name: "DevOps & Cloud",
         technologies: [
-            "AWS",
-            "GCP",
-            "Docker",
-            "Kubernetes",
-            "CI/CD",
-            "GitHub Actions",
-            "Firebase",
-            "Vercel",
+            { name: "AWS", icon: "aws" },
+            { name: "GCP", icon: "gcp" },
+            { name: "Docker", icon: "docker" },
+            { name: "Kubernetes", icon: "kubernetes" },
+            { name: "CI/CD" },
+            { name: "GitHub Actions", icon: "githubactions" },
+            { name: "Firebase", icon: "firebase" },
+            { name: "Vercel", icon: "vercel" },
         ],
         color: "from-orange-500 to-red-500",
     },
     {
         name: "Tools & Practices",
         technologies: [
-            "Git",
-            "GitHub",
-            "VS Code",
-            "IntelliJ IDEA",
-            "Cursor",
-            "Antigravity",
-            "Agile",
-            "Scrum",
-            "Jest",
-            "Vitest",
-            "Webpack",
-            "Vite",
-            "Turborepo",
-            "Monorepo",
+            { name: "Git", icon: "git" },
+            { name: "GitHub", icon: "github" },
+            { name: "VS Code", icon: "vscode" },
+            { name: "IntelliJ IDEA", icon: "idea" },
+            { name: "Cursor" },
+            { name: "Antigravity" },
+            { name: "Agile" },
+            { name: "Scrum" },
+            { name: "Jest", icon: "jest" },
+            { name: "Vitest", icon: "vitest" },
+            { name: "Webpack", icon: "webpack" },
+            { name: "Vite", icon: "vite" },
+            { name: "Turborepo" },
+            { name: "Monorepo" },
         ],
         color: "from-yellow-500 to-amber-500",
     },
     {
         name: "AI & Data",
         technologies: [
-            "LLMs",
-            "Transformers",
-            "Model Context Protocol (MCP)",
-            "Machine Learning",
-            "NLP",
-            "Big Data",
-            "Hadoop",
+            { name: "LLMs" },
+            { name: "Transformers" },
+            { name: "Model Context Protocol (MCP)" },
+            { name: "Machine Learning" },
+            { name: "NLP" },
+            { name: "Big Data" },
+            { name: "Hadoop" },
         ],
         color: "from-indigo-500 to-violet-500",
     },
@@ -130,10 +135,18 @@ const techStack: TechCategory[] = [
                     <div class="flex flex-wrap gap-3">
                         {category.technologies.map((tech) => (
                             <span
-                                class="px-4 py-2 rounded-full font-medium transition-all duration-300 glass-panel hover:-translate-y-0.5 hover:border-[var(--color-primary)]"
+                                class="flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all duration-300 glass-panel hover:-translate-y-0.5 hover:border-[var(--color-primary)] group"
                                 style="color: var(--color-text);"
                             >
-                                {tech}
+                                {tech.icon && (
+                                    <img
+                                        src={`https://skillicons.dev/icons?i=${tech.icon}`}
+                                        alt={`${tech.name} icon`}
+                                        class="w-5 h-5 object-contain"
+                                        loading="lazy"
+                                    />
+                                )}
+                                <span>{tech.name}</span>
                             </span>
                         ))}
                     </div>
